@@ -1,0 +1,8 @@
+<% if session["account_id"] %>
+  <h3 style="float: right">Logged in as account <%= session["account_id"]%>,
+  <form style="display:inline" action="/logout" method="post">
+    <%= MyRodauth.csrf_tag("/logout") %>
+    <input type="submit" value="Log Out"></form>
+  </h3>
+<% end %>
+<h1 style="float: left"> Log In Successful </h1>
